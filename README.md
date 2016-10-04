@@ -8,7 +8,7 @@ response object from the previous 200 response.
 They're a pain to deal with having to check for 304 and deal with the caching strategy yourself, this is not designed to work between refreshes in the browser. This library is aimed towards browser usage. but its not setup between browser refreshes? yes this is a requirement of an existing project but by all means plugin a caching strategy somehow in a PR.
 
 #install:
-  npm i --save f-etag
+  `npm i --save f-etag`
 
 #Usage:
 
