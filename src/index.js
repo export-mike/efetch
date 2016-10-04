@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch'
 const data = {}
 const etags = {}
 
-export default (url = null, options = { headers: {} }) => {
+export default (url = null, options = { headers: {} }, skipExtraHeader = false) => {
   /* eslint no-param-reassign:0 */
   url = url ? url : options.url
   if (options.method === 'GET' || !options.method) {
@@ -12,7 +12,9 @@ export default (url = null, options = { headers: {} }) => {
       options.headers['If-None-Match'] = etag
     }
 
-    options.headers['Access-Control-Expose-Headers'] = 'ETag'
+    if (!skipExtraHeader) {
+      options.headers['Access-Control-Expose-Headers'] = 'ETag';
+    }
 
     return fetch(url, options)
     .then((response) => {
