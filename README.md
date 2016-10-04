@@ -16,3 +16,8 @@ They're a pain to deal with having to check for 304 and deal with the caching st
   import eFetch from 'f-etag';
   // use eFetch like the normal fetch api.
 ```
+
+You can pass an extra flag to skip the addition of the `Access-Control-Expose-Headers` header
+``` Javascript
+    eFetch(url, options, true);
+```
