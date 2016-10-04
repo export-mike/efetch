@@ -1,6 +1,6 @@
 {
   "name": "f-etag",
-  "version": "1.0.0-rc2",
+  "version": "1.0.1",
   "description": "a thin wrapper around fetch api to provide a basic level in memory cache for etags ",
   "main": "lib/index.js",
   "scripts": {
