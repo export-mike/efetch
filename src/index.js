@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch'
 const data = {}
 const etags = {}
 
-export default (url = null, options = { headers: {} }, skipExtraHeader = false) => {
+module.export = (url = null, options = { headers: {} }, skipExtraHeader = false) => {
   /* eslint no-param-reassign:0 */
   url = url ? url : options.url
   if (options.method === 'GET' || !options.method) {
